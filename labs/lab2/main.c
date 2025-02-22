@@ -1,49 +1,35 @@
-#include <stdlib.h>
-#include <math.h>
-#include <stdbool.h>
-/* ЗАДАНИЕ 1
-	Объявить вещественные переменные a, b и с и задать их значения. Предполагая, что a, b, c есть коэффициенты квадратного уравнения вывести на консоль значения их корней х1, х2.
-	Следует подобрать такие значения коэффициентов, при которых корни будут существовать.
-	Примечание. Для выполнения задания потребуется функции вычисления квад-ратного корня (возведение в степень), а так же вывод данных на консоль.
-	Возведение в степень - подключаем заголовочный файл	 math.h и исполь-зуем функцию pow, первым параметром которого должен быть возводимое значение, а вторым - степень, тип данных double.
-	Вывод данных - заголовочный файл stdio.h, функция printf, первым параметром является форматная строка, а последующие - переменные, значения которых необхо-димо вывести.
-	Допилить прогу зациклить её с сообщением продолжить да\нет?
-*/
-int main(int argc, char *argv[]) {
-    double a, b, c, x1, x2, d;
-    char ch;
-    bool p=true;
-    while (p) {
-        printf("Vvedite a:\n");
-        scanf("%lf", &a);
+#include <iostream>
 
-        printf("Vvedite b:\n");
-        scanf("%lf", &b);
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-        printf("Vvedite c:\n");
-        scanf("%lf", &c);
-
-        d = pow(b, 2) - 4 * a * c;
-
-        if (d < 0) {
-            printf("KORNEY NET\n");
-        } else if (d == 0) {
-            x1 = -b / (2 * a);
-            printf("x1 = %lf\n", x1);
-        } else {
-            x1 = (-b + sqrt(d)) / (2 * a);
-            x2 = (-b - sqrt(d)) / (2 * a);
-            printf("x1 = %lf\n", x1);
-            printf("x2 = %lf\n", x2);
-        }
-
-        printf("Prodoljaem? (d/n): ");
-        scanf(" %c", &ch);
-
-        if (ch =='n') {
-            break;
-        }
-    }
-
-    return 0;
+int main() {
+	double mat [3][3]={
+		{1,2,3},
+		{4,5,6},
+		{7,8,9}	
+	};
+	
+	int a,b;
+	for (a=0,a<3,a++){
+		for (b=0,a<3, a++){
+			printf("%lf\t",mat[a][b],"/n");
+			
+		
+		
+		}
+	    
+	    
+	    
+	    	printf("\n");
+		
+		
+	}
+	
+	
+	
+	
+   
+   
+   
+	return 0;
 }
